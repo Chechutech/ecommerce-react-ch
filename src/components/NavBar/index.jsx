@@ -1,27 +1,28 @@
-import React from 'react';
-import './navbar.css'
-import {AiOutlineShoppingCart} from "react-icons/ai"
+import React from "react";
+import "./navbar.css";
+import { VscAccount } from "react-icons/vsc";
+import { TfiWorld } from "react-icons/tfi";
+import CartWidget from "../CardWidget";
 
 export default function NavBar() {
   return (
     <div className="nav-container">
-      <div className="nav-logo">Logo</div>
+      <div className="nav-logo">VeGreenShop</div>
       <div className="menu">
-        <div>
-        <input type="text" className="search-bar" aria-label="Search"></input>
-        {/* <button type="submit" class="searchButton">
-        <i class="fa fa-search"></i>
-     </button> */}
-
-        </div>
         <ul className="menu-choices">
-          <li>About</li>
-          <li>Productos</li>
-          <li>Sale</li>
-          <li>ENG</li>
-        </ul>   
-      
-        <AiOutlineShoppingCart className="shopping-icon"/>
+          <li>Info</li>
+          <li>Categoria</li>
+          <li>Marcas</li>
+        </ul>
+             <input
+            type="text"
+            className="search-bar"
+            placeholder="Encuentra.."
+            aria-label="Search"
+          ></input>
+          <VscAccount className="user-icon" />
+          <CartWidget />
+          <TfiWorld />
       </div>
     </div>
   );

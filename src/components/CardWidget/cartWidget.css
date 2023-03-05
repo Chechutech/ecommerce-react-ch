@@ -1,0 +1,32 @@
+.cart{
+    display: flex;
+    text-align: end;
+    margin-right: 2rem;
+    align-items: center;
+    position: relative;
+    justify-content: flex-end;
+    
+  
+}
+.shopping-icon {
+    width: 1.1em;
+    height: 1.1em;         
+   
+}
+
+.cart-badge {
+ position: absolute;
+  width: 1.1rem;
+  height: 1.1rem;
+  right: -0.8rem;
+  top: 0.5rem;
+  border-radius: 50%;
+  background: #216417;
+  color: #fff;
+  border:2px solid #ffffff; 
+  font-size: 0.6rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
