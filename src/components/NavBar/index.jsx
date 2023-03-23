@@ -3,15 +3,18 @@ import "./navbar.css";
 import { VscAccount } from "react-icons/vsc";
 import { TfiWorld } from "react-icons/tfi";
 import CartWidget from "../CardWidget";
+import { NavLink } from "react-router-dom";
+
 
 export default function NavBar() {
   return (
     <div className="nav-container">
-      <div className="nav-logo">VeGreenShop</div>
+      <div className="nav-logo">
+      <NavLink to={"/"}>VeGreenShop</NavLink></div>
       <div className="menu">
         <ul className="menu-choices">
-          <li>Info</li>
-          <li>Categoria</li>
+         <NavLink to={"/category/body"}><li>Body</li></NavLink>
+         <NavLink to={"/category/face"}><li>Face</li></NavLink>
           <li>Marcas</li>
         </ul>
              <input
