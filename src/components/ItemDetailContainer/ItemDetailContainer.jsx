@@ -1,7 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
 import { getFirestore, doc, getDoc } from 'firebase/firestore';
-import mockList from '../../mocks/mockList';
 import ItemDetail from '../ItemDetail/ItemDetail';
 import { useParams } from 'react-router-dom';
 
@@ -17,28 +16,7 @@ export default function ItemDetailContainer() {
     .catch((err) => console.log(err));
    
   }, [id])
-  
 
-
-
-
-
-
-
-  // request to the mock Data
-
-  // useEffect(() => {
-  //   const singleItem = new Promise((resolve) => {
-  //     const getItem = mockList.find((i) => i.id === parseInt(id));
-  //     setTimeout(() => resolve(getItem), 2000);
-  //   });
-
-  //   singleItem
-  //     .then((response) => {
-  //       setItemDetail(response);
-  //     })
-  //     .catch((err) => console.log(err));
-  // }, [id]);
 
   return (
     <div>
