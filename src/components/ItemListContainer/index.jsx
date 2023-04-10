@@ -1,36 +1,58 @@
 import React from "react";
-import "./ItemListContainer.css";
-import mockList from "../../mocks/mockList";
+import "./itemListContainer.css";
 import { useEffect, useState } from "react";
 import ItemList from "../ItemList/ItemList";
+import {
+  getFirestore,
+  collection,
+  getDocs,
+  query,
+  where,
+} from "firebase/firestore";
 
-export default function ItemListContainer({categoryId, isCategoryRoute}) {
-  
-  
+export default function ItemListContainer({ categoryId, isCategoryRoute }) {
   const [products, setProducts] = useState([]);
-  
-  
+
   useEffect(() => {
-    const stock = new Promise((resolve) =>
-      setTimeout(() => resolve(mockList), 2000)
-    );
-    stock
-      .then((response) => {
-        if (isCategoryRoute){
-        const filterProduct = response.filter(
-          (product) => product.category === categoryId
-          );
-      setProducts(filterProduct);
+    const querydb = getFirestore();
+    const queryCollection = collection(querydb, "products");
+
+    if (isCategoryRoute) {
+      const queryFilter = query(
+        queryCollection,
+        where("category", "==", categoryId)
+      );
+
+      getDocs(queryFilter)
+        .then((res) =>
+          setProducts(
+            res.docs.map((product) => ({ id: product.id, ...product.data() }))
+          )
+        )
+        .catch((error) =>
+          console.log("Error al obtener productos de la categoría", error)
+        );
     } else {
-      setProducts(response);
+      getDocs(queryCollection)
+        .then((res) =>
+          setProducts(
+            res.docs.map((product) => ({ id: product.id, ...product.data() }))
+          )
+        )
+        .catch((error) =>
+          console.log("Error al obtener todos los productos", error)
+        );
     }
-        })
-       .catch((err) => console.log(err));
   }, [categoryId]);
 
   return (
-    <div className="itemList-container">
-      <ItemList products={products} />
-    </div>
+    <>
+      <div className="list-container">
+        <h3>Productos</h3>
+        <div className="itemList-containerss">
+          <ItemList products={products} />
+        </div>
+      </div>
+    </>
   );
 }

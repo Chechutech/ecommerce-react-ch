@@ -1,17 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Item from "../Item/Item";
+import "./itemList.css"
 
 
 
 export default function ItemList({ products }) {
   return (
-    //<div>Padre de Item</div>
+  
     <div>
-      <div>
+      <div className="itemList-container">
         {products.map((product, index) => (
-          <Link to={`/item/${product.id}`} key={product.id}>
-          <Item product={product}  />
+          <Link to={`/item/${product.id}`} className="nav-link">
+          <Item product={product}  index={product.id}  />
           </Link> ))}
         </div>
     </div>

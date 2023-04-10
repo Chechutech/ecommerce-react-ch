@@ -1,0 +1,61 @@
+
+
+.home{
+    background-image: url("/assets/images/homeheader1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0,0,0,0.30);
+    background-blend-mode: multiply;
+    width: 100%;
+    height: 90vh;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit);
+    align-items: center;
+    text-align: center;   
+}
+.headerContainer{
+    position: absolute;
+	width: 100%;
+   	top: 50%;
+	margin-top: -50px;
+}
+
+.headerContainer > h1 {
+    font-size:  3.4rem;
+	font-weight: 400;
+    font-weight: bold;
+	line-height: 6rem; 
+    color:white;  
+    
+        
+}
+
+
+.headerContainer > p {
+    font-size: 1.5rem;
+    color:black;  
+    background-color:white;    
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.btn-prod{
+    font-family: "alike";
+    padding: 0.6rem 4rem;
+    border-radius: 0.3rem;
+    background-color: black;
+    font-weight: bold;
+    font-size:1.2rem;
+    color: white;
+    border-style: none;
+    text-transform: uppercase;
+}
+.btn-prod:hover {
+    background-color: whitesmoke;
+    color: brown;
+
+}

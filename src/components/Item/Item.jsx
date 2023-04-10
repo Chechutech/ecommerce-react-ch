@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
+import { CartContext } from "../../Contex/CartContex";
 
 import "./item.css";
 
+
 export default function Item({ product }) {
+  const  name = useContext(CartContext);
+  console.log('Item', name);
+
+
   return (
     <div className="item-container">
       <div className="item-card">
@@ -10,9 +16,10 @@ export default function Item({ product }) {
           <img src={product.image} />
         </div>
         <div className="text-container">
-          <h3>{product.name} </h3>
-          <p>{product.description}</p>
-          <p>{product.price}</p>
+          <h4>{product.name}</h4>
+          <p>{product.description}</p>         
+          <span>€ {product.price}</span>          
+        
         </div>
       </div>
     </div>

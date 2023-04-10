@@ -3,7 +3,7 @@ export default [
         id: 1,
         name: "Product #1",
         description: "Lorem ipsum dolor sit amet, consectetur adip",
-        price: "€12",
+        price: 12,
         stock: 5,
         category: "face",
         image:'assets/images/vegan-prod.jpg'
@@ -14,7 +14,7 @@ export default [
         id: 2,
         name: "Product #2",
         description: "Lorem ipsum dolor sit amet, consectetur adip",
-        price: "€12",
+        price: 12,
         stock: 43,
         category: "face",
         image:'assets/images/vegan-prod.jpg'
@@ -24,7 +24,7 @@ export default [
         id: 3,
         name: "Product #3",
         description: "Lorem ipsum dolor sit amet, consectetur adip",
-        price: "€12",
+        price: 12,
         stock: 3,
         category: "face",
         image:'assets/images/vegan-prod.jpg'
@@ -34,7 +34,7 @@ export default [
         id: 4,
         name: "Product #4",
         description: "Lorem ipsum dolor sit amet, consectetur adip",
-        price: "€12",
+        price: 24,
         stock:23,
         category: "face",
         image:'assets/images/vegan-prod.jpg'
@@ -42,7 +42,7 @@ export default [
         id: 5,
         name: "Product #5",
         description: "Lorem ipsum dolor sit amet, consectetur adip",
-        price: "€12",
+        price: 20,
         stock: 12,
         category: "body",
         image:'assets/images/vegan-prod.jpg'
@@ -50,7 +50,7 @@ export default [
         id: 6,
         name: "Product #6",
         description: "Lorem ipsum dolor sit amet, consectetur adip",
-        price: "€12",
+        price: 30,
         stock: 8,
         category: "body",
         image:'assets/images/vegan-prod.jpg'
@@ -59,7 +59,7 @@ export default [
         id: 7,
         name: "Product #7",
         description: "Lorem ipsum dolor sit amet, consectetur adip",
-        price: "€12",
+        price: 6,
         stock: 15,
         category: "hand",
         image:'assets/images/vegan-prod.jpg'
@@ -68,7 +68,7 @@ export default [
         id: 8,
         name: "Product #8",
         description: "Lorem ipsum dolor sit amet, consectetur adip",
-        price: "€12",
+        price: 9,
         stock: 11,
         category: "hair",
         image:'assets/images/vegan-prod.jpg'
@@ -77,14 +77,14 @@ export default [
         id: 9,
         name: "Product #9",
         description: "Lorem ipsum dolor sit amet, consectetur adip",
-        price: "€12",
+        price: 10,
         stock: 7,
         category: "perfum",
         image:'assets/images/vegan-prod.jpg'
     },    {
         id: 10,
         name: "Product #10",
-        price: "€12",
+        price: 15,
         description: "Lorem ipsum dolor sit amet, consectetur adip",
         stock: 90,
         category: "eyes",

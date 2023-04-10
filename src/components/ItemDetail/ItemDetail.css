@@ -1,0 +1,40 @@
+.detail-container{
+    display:flex;
+    margin: 5rem 8rem;
+    gap: 6rem;
+ }
+
+ .left-container{
+    width:80%;
+}
+
+.img-containter {
+    height: 50rem;
+    padding: 1rem 1rem;
+    border: 1px solid black;
+}
+
+.right-container {
+    display:flex;
+    flex-direction: column;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 4rem;
+    padding-bottom: 1rem;
+    }
+
+.right-container > p {
+    font-size: 1.1rem;
+    font-weight: 400;
+
+}
+.right-container > span{
+    width: 3rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 0.5rem;
+    background: green;
+    color: white;
+    font-family: 'Gruppo';
+    font-weight: bolder;
+    font-size: 1.2rem;
+}

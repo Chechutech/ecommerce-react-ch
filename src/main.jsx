@@ -1,40 +1,48 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import Root from './routes/Root'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import Cart from "./routes/Cart";
+import Root from "./routes/root";
+import Checkout from "./routes/Checkout";
+import CartProvider from "./Contex/CartContex";
 
 //ROUTES
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-import ItemRoot from './routes/item';
-// import './index.css'
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ItemRoot from "./routes/item";
+import "./firebase/config";
+import Layout from "./components/Layout/Layout";
+
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <Root />,
+    element: <Layout />,
+    children: [
+      {
+        path: "/",
+        element: <Root />,
+      },
+      {
+        path: "/category/:id",
+        element: <Root />,
+      },
+      {
+        path: "/item/:id",
+        element: <ItemRoot />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
+      },
+      {
+        path: "/checkout",
+        element: <Checkout />,
+      },
+    ],
   },
-  {
-    path: "/category/:id",
-    element: <Root />,
-  },
-  {
-    path: "/item/:id",
-    element: <ItemRoot />,
-  },
-  {
-    path: "/cart",
-    element: <div>Hello world!</div>,
-  },
-  {
-    path: "/checkout",
-    element: <div>Hello world!</div>,
-  },
-  
-]); 
-ReactDOM.createRoot(document.getElementById('root')).render(
+]);
+
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-      <RouterProvider router={router} /> 
-   
-  </React.StrictMode>,
-)
+    <CartProvider>
+      <RouterProvider router={router} />
+    </CartProvider>
+  </React.StrictMode>
+);
