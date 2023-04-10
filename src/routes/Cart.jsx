@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { CartContext } from "../Contex/CartContex";
 import { Link } from "react-router-dom";
 import ItemCart from "../components/ItemCart/ItemCart.jsx";
-import "../components/ItemCart/itemCart.css";
+
 
 export default function Cart() {
   const { cart, totalPrice } = useContext(CartContext);
@@ -25,11 +25,12 @@ export default function Cart() {
           ))}
           <div className="cart-total">
             <p>Total: € {totalPrice()}</p>
+            <Link to="/checkout" className="nav-link">
             <button className="checkout-btn">
-              <Link to="/checkout" className="nav-link">
-                Confirmar pedido
+               Confirmar pedido
+                </button>
               </Link>
-            </button>
+          
           </div>
         </div>
       </div>
@@ -37,4 +38,4 @@ export default function Cart() {
   );
 }
 
-// <button onClick={handleClickOrder} ><Link to='/checkout'>Confirmar pedido</Link></button>
+

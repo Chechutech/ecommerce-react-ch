@@ -43,8 +43,8 @@ export default function Checkout() {
 
   return (
     <div>
-      <form class="container">
-        <div class="form-container">
+      <form className="container">
+        <div className="form-container">
           <h3>Información personal</h3>
           <label>Nombre</label>
           <input type="text" placeholder="nombre" id="name" />
@@ -52,13 +52,13 @@ export default function Checkout() {
           <input type="text" placeholder="xxxxx@xxxx.com" id="email" />
           <label>Confirma tu email</label>
           <input type="text" placeholder="xxxxx@xxxx.com" id="confirm-email" />
-          <label>Phone</label>
+          <label>Movil</label>
           <input type="text" placeholder="34564023032" id="phone" />
         </div>
-        <div class="order-container">
+        <div className="order-container">
           <h3>Tu pedido</h3>
           <div>
-            <p>Total: {totalPrice()}</p>
+            <p>Total: € {totalPrice()}</p>
             <button onClick={handleClickOrder} className="order-button">
               Comprar
             </button>

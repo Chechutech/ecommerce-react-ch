@@ -6,7 +6,7 @@ import "./item.css";
 
 export default function Item({ product }) {
   const  name = useContext(CartContext);
-  console.log('Item', name);
+ 
 
 
   return (
