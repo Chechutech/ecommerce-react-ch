@@ -1,12 +1,12 @@
 import React from 'react'
 import NavBar from '../NavBar'
-import { Outlet as Page } from 'react-router-dom'
+import { Outlet} from 'react-router-dom'
 
 function Layout() {
   return (
     <main>
       <NavBar />
-      <Page />
+      <Outlet />
     </main>
   )
 }
