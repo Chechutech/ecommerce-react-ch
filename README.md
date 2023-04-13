@@ -4,7 +4,7 @@ This is a React-based ecommerce application that utilizes Firebase for the produ
 
 ## 💻 Desktop Demo
 
-https://midori-veshop-jc7w6f7c9-chechutech.vercel.app
+https://midori-veshop.vercel.app/
 
 ## Getting started
 
